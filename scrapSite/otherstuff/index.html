@@ -1,0 +1,9 @@
+{% if latest_scraper_list %}
+    <ul>
+    {% for poll in latest_scraper_list %}
+        <li><a href="/scrape/{{ scraper.id }}/">{{ scraper.weighted_avg }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No scrape are available.</p>
+{% endif %} %}
